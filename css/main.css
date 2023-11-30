@@ -59,10 +59,10 @@ h1,h2, h3, h4, h5, h6 {
     margin: 15px auto;
     display: block;
     width: 120px;
-    border: 3px solid rgb(254, 246, 246)
+    border: 3px solid rgb(81, 81, 81)
 }
 #header .profile h1 {
-    color: #faf8f8;
+    color: #fff8f8;
     font-size: 24px;
     margin: 0;
     padding: 0;
@@ -73,7 +73,7 @@ h1,h2, h3, h4, h5, h6 {
 }
 #header .profile h1 a,
 #header .profile h1 a:hover{
-    color: rgb(255, 255, 255);
+    color: rgb(173, 173, 173);
     text-decoration: none;
 }
 #header .profile .social-links a{
@@ -211,19 +211,21 @@ h1,h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 56px;
     font-size: 64px;
-    color: #ffffff;
+    color: #707070;
+    border-bottom: 3px solid #5f5f5f;
 }
 #hero p {
-    color: #000000;
+    color: #6f6f6f;
     margin-bottom: 50px;
     font-size: 26px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 #hero p span {
-    color: #000000;
+    color: #7b7b7b;
     padding-bottom: 4px;
     letter-spacing: 1px;
-    border-bottom: 3px solid #f4f4f4;
+    border-bottom: 3px solid #5f5f5f;
 }
 @media (min-width: 1024px) {
     #hero {
@@ -407,41 +409,43 @@ section{
     border: 2px solid #149ddd;
 }
 /* Portfolio  - filtro */
+/* Portfolio === Filtro  */
 .portfolio .portfolio-item {
     margin-bottom: 30px;
   }
-.portfolio #portfolio-filters{
+  .portfolio #portfolio-filters {
     padding: 0;
     margin: 0 auto 35px auto;
     list-style: none;
     text-align: center;
-    background: #fff;
+    background: #000000;
     border-radius: 50px;
-}
-.portfolio #portfolio-filters li{
+  }
+  .portfolio #portfolio-filters li {
     cursor: pointer;
-    display: inline block;
+    display: inline-block;
     padding: 10px 15px 8px 15px;
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-}
-.portfolio #portfolio-filters li:hover, .portfolio #portfolio-filters li.filter-ative{
-    color: #757575;
-}
-.portfolio .portfolio-wrap {
+    transition: all 0.3s ease-in-out; 
+  }
+  .portfolio #portfolio-filters li:hover, 
+  .portfolio #portfolio-filters li.filter-active {
+    color: #149ddd;
+  }
+  .portfolio .portfolio-wrap {
     transition: 0.3s;
     position: relative;
     overflow: hidden;
     z-index: 1;
-}
-.portfolio .portfolio-wrap::before {
+  }
+  .portfolio .portfolio-wrap::before {
     content: "";
-    background: #101010;
+    background: rgba(255, 255, 255, 0.5);
     position: absolute;
     left: 0;
     right: 0;
@@ -450,134 +454,124 @@ section{
     transition: all ease-in-out 0.3s;
     z-index: 2;
     opacity: 0;
-}
-.portfolio .portfolio-wrap .portfolio-links {
-    opacity:1;
-    left:0;
+  }
+  .portfolio .portfolio-wrap .portfolio-links {
+    opacity: 1;
+    left: 0;
     right: 0;
-    bottom:-60px;
-    z-index:3;
-    position:absolute;
+    bottom: -60px;
+    z-index: 3;
+    position: absolute;
     transition: all ease-in-out;
     display: flex;
     justify-content: center;
-}
-.portfolio .portfolio-wrap .portfolio-links a {
-    color: rgb(247, 243, 243);
+  }
+  .portfolio .portfolio-wrap .portfolio-links a {
+    color: #000000;
     font-size: 28px;
     text-align: center;
-    background: rgb(2, 2, 2);
+    background: rgba(0, 0, 0, 0.75);
     transition: 0.3s;
     width: 50%;
-}
-.portfolio .portfolio-wrap .portfolio-links a:hover {
-    background: #149ddd;
-}
-.portfolio .portfolio-wrap .portfolio-links a+a {
-    border-left: 1px solid rgb(255, 255, 255);
-}
-.portfolio .portfolio-wrap:hover ::before {
+  }
+  .portfolio .portfolio-wrap .portfolio-links a:hover {
+    background: rgba(20, 157, 221, 0.95);
+  }
+  .portfolio .portfolio-wrap .portfolio-links a+a {
+    border-left: 1px solid #149ddd;
+  }
+  .portfolio .portfolio-wrap:hover::before {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     opacity: 1;
-}
-.portfolio .portfolio-wrap:hover .portfolio-links{
+  }
+  .portfolio .portfolio-wrap:hover .portfolio-links{
     opacity: 1;
     bottom: 0;
   }
-  .portfolio-wrap .img-fluid {
-    width: 500px;
-    height: 300px;
+  /*  Serviços  */
+  
+  /* Avaliações */
+  
+  /*  formulario  */
+  .contact {
+    padding-bottom: 300px;
   }
-/* Serviços */
-
-
-
-
-/* Avaliações*/
-
-
-
-/* Formulario */
-
-.contact {
-    padding-bottom: 130px;
-}
-.contact .info {
+  .contact .info {
     padding: 30px;
-    background: #f4f4f4;
+    background: #fff;
     width: 100%;
-    box-shadow: 0 0 24px black;
-}
-.contact .info i {
-    font-size: 24px;
-    color: #000000;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+  }
+  .contact .info i {
+    font-size: 20px;
+    color: #149ddd;
     float: left;
     width: 44px;
     height: 44px;
-    background: #f4f4f4;
+    background: #dff3fc;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
-}
-.contact  .info h4{
+  }
+  .contact .info h4 {
     padding: 0 0 0 60px;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #000000; 
-}
-.contact .info p {
+    color: #050d18;
+  }
+  .contact .info p {
     padding: 0 0 10px 60px;
     margin-bottom: 20px;
     font-size: 14px;
-    color: #f4f4f4;
-}
-.contact .info .email p {
-    padding-top:5px;
-}
-.contact .info .email:hover i,
-.contact .info .email:hover i, 
-.contact .info .phone:hover i {
-background: #000000;
-color: white;
-}
-.contact .php-email-form {
+    color: #173b6c;
+  }
+  .contact .info .email p {
+    padding-top: 5px;
+  }
+  .contact .info .address:hover i, 
+  .contact .info .email:hover i,
+  .contact .info .phone:hover i {
+    background: #149ddd;
+    color: #ffffff;
+  }
+  .contact .php-email-form {
     width: 100%;
     padding: 30px;
-    background: #f4f4f4;
-    box-shadow: 0 0 24px black;
-}
-.contact .php-email-form .form-group {
+    background: #fff;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+  }
+  .contact .php-email-form .form-group {
     padding-bottom: 8px;
-}
-.contact .php-email-form label {
-    padding-bottom:8px;
-}
-.contact .php-email-form input, 
-.contact .php-email-form textarea {
+  }
+  .contact .php-email-form label {
+    padding-bottom: 8px;
+  }
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
-}
-.contact .php-email-form input {
+  }
+  .contact .php-email-form input {
     height: 44px;
-}
-.contact .php-email-form textarea {
+  }
+  .contact .php-email-form textarea {
     padding: 10px 15px;
-}
-.contact .php-email-form button[type=submit]{
-    background: #101010;
+  }
+  .contact .php-email-form button[type=submit] {
+    background: #149ddd;
     border: 0;
     padding: 10px 24px;
-    color: #ffffff;
+    color: #fff;
     transition: 0.4s;
     border-radius: 4px;
-}
-.contact .php-email-form button[type=submit]:hover {
-    background: #020202;
-}
+  }
+  .contact .php-email-form button[type=submit]:hover {
+    background: #2eafec;
+  }
